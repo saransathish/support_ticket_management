@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .product img {
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    button{
+        height: 35px;
+        width: 100px;
+        /* background-color: yellow;
+        color: white; */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Laptop Store</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Laptops</a>
+    <a href="#">Accessories</a>
+    <a href="#">Contact Us</a>
+    <a href="index/">Support</a>
+  </nav>
+  <div class="container">
+    <div class="product">
+      <img src="{% static 'img/laptop1.jpg' %}" alt="Laptop Model 1">
+      <div>
+        <h2>Acer Nitro 5 Ryzen 5 Hexa Core 4600H</h2>
+        <p>8 GB/1 TB HDD/256 GB SSD/Windows 10 Home/4 GB Graphics/NVIDIA GeForce GTX 1650- AN515-44/ AN515-44-R9QA / AN515-44-R8VS Gaming Laptop  (15.6 inch, Obsidian Black, 2.3 kg)
+        </p>
+        <p>Price: ₹61,990 <del>₹99,999</del> 38% off</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="{% static 'img/laptop2.jpg' %}" alt="Laptop Model 2">
+      <div>
+        <h2>MSI Katana 15 Core i5 12th Gen</h2>
+        <p>16 GB/1 TB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 3050- Katana 15 B12UDXK-1019IN Gaming Laptop  (15.6 Inch, Black, 2.25 Kg).</p>
+        <p>Price: ₹74,990 <del>₹99,990</del> 25% off</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+        <img src="{% static 'img/laptop3.jpg' %}" alt="Laptop Model 3">
+        <div>
+          <h2>ASUS ROG Zephyrus Duo 16 with 90WHr Battery Ryzen 9 16 Core 7945HX</h2>
+          <p>32 GB/2 TB SSD/Windows 11 Home/16 GB Graphics/NVIDIA GeForce RTX 4090/240 HZ/175 W - GX650PY-NM052WS Gaming Laptop  (16 Inch, Black, 2.67 Kg, With MS Office)</p>
+          <p>Price:₹4,29,990 <del>₹4,79,990</del> 10% off
+        </p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="{% static 'img/laptop4.jpg' %}"alt="Laptop Model 4">
+        <div>
+          <h2>MSI Katana 15 Core i7 12th Gen</h2>
+          <p>16 GB/1 TB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 3050- Katana 15 B12UDXK-1018IN Gaming Laptop  (15.6 Inch, Black, 2.25 Kg)</p>
+          <p>Price: ₹84,990 <del>₹1,09,990</del> 22% off
+        </p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="{% static 'img/laptop5.jpg' %}" alt="Laptop Model 5">
+        <div>
+          <h2>ASUS TUF Gaming F15 Core i7 11th Gen</h2>
+          <p>16 GB/1 TB SSD/Windows 10 Home/4 GB Graphics/NVIDIA GeForce RTX 3050/144 Hz - FX506HCB-HN225T Gaming Laptop  (15.6 inch, Graphite Black, 2.30 kg)</p>
+          <p>Price:₹94,990 <del>₹1,36,990</del> 30% off</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product">
+        <img src="{% static 'img/laptop6.jpg' %}" alt="Laptop Model 6">
+        <div>
+          <h2>Acer Gaming Core i9 13th Gen</h2>
+          <p>16 GB/1 TB SSD/Windows 11 Home/8 GB Graphics/NVIDIA GeForce RTX 4060- PHN16-71 Gaming Laptop  (16 Inch, Obsidian Black, 2.6 Kg)</p>
+          <p>Price: ₹1,69,990 <del>₹1,71,999</del> 1% off   </p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    
+  </div>
+</body>
+</html>

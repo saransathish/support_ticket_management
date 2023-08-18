@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+    .ticket-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  .ticket-image {
+    flex: 1;
+    overflow: hidden;
+  }
+  .ticket-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .ticket-details {
+    flex: 2;
+    padding: 20px;
+  }
+  .ticket-id {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .ticket-date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .ticket-description {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .ticket-status {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  .close-button {
+    margin-top: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  </style>
+</head>
+<body>
+  <!-- <header>
+    <h1>Laptop Store</h1>
+  </header> -->
+  <nav>
+    <a href="">Home</a>
+    <a href="">Laptops</a>
+    <a href="">Contact Us</a>
+    <a href="create/"> Create New Ticket</a>
+  </nav>
+  {% for x in data %}
+  <div class="ticket-container">
+    <div class="ticket-image">
+      <img src="product-image.jpg" alt="Product Image">
+    </div>
+    <div class="ticket-details">
+      <div class="ticket-id">Ticket ID: #12345</div>
+      <div class="ticket-date">Date: August 17, 2023</div>
+      <div class="ticket-description">
+       {{x.username}}jb
+      </div>
+      <div class="ticket-status">Status: Open</div>
+      <button class="close-button">Close Ticket</button>
+
+    </div>
+  </div>
+  {% endfor %}
+</body>
+</html>
