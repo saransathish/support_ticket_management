@@ -50,7 +50,6 @@
     overflow: hidden;
   }
   .ticket-image img {
-    margin-top: 30px;
     max-width: 100%;
     height: auto;
   }
@@ -93,15 +92,15 @@
 <body>
 
   <header>
-    <h1>Hello {{uname}}</h1>
+    <h1>Manage Tickets</h1>
   </header>
   <nav>
-    <a href="">Home</a>
-    <a href="">Laptops</a>
-    <a href="">Contact Us</a>
-    <a href="create/"> Create New Ticket</a>
+    <a href="nav/{{1}}">All</a>
+    <a href="nav/{{2}}">Solved</a>
+    <a href="nav/{{4}}">Pending</a>
+    <a href="nav/{{3}}">cancelled</a>
   </nav>
-  {% if flag  %}
+  {% if data  %}
   {% for x in data %}
   <div class="ticket-container">
     <div class="ticket-image">
@@ -117,7 +116,8 @@
       
       {% if x.status == "pending" %}
       <div class="ticket-status">Status: {{x.status}}</div>
-      <button class="close-button">Close Ticket</button>
+      <a href="take/{{x.id}}"><button class="close-button">Close Ticket</button></a>
+      <a href="action/{{x.id}}"><button class="close-button" style="background-color: green;">solve Ticket</button></a>
       {% elif x.status == "solved" %}
       <div class="ticket-status" style="color: green;">Status: {{x.status}}</div>
       {% else %}
@@ -128,7 +128,7 @@
   </div>
   {% endfor %}
   {% else %}
-  <h3>Create your first <a href="create/">support ticket</a></h3>
+  <h3>No tickets Available</h3>
   {% endif %}
 </body>
 </html>

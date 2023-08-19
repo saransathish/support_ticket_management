@@ -36,6 +36,47 @@
     nav a:hover {
       background-color: #555;
     }
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px; /* Add margin between links */
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  nav a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0; /* Align dropdown with left side of button */
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
     .container {
       max-width: 1200px;
@@ -73,6 +114,13 @@
     <a href="#">Accessories</a>
     <a href="#">Contact Us</a>
     <a href="index/">Support</a>
+    <div class="dropdown">
+      <button class="dropbtn">Sign In</button>
+      <div class="dropdown-content">
+        <a href="adminlog/">As Admin</a>
+        <a href="index/">As User</a>
+      </div>
+    </div>
   </nav>
   <div class="container">
     <div class="product">

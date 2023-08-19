@@ -8,7 +8,9 @@ class users(models.Model):
     age = models.IntegerField()
     password = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
-class tickets(models.Model):
+
+
+class Ticket(models.Model):
     ticketid = models.CharField(max_length=255)
     ticket_date = models.DateField()
     username = models.CharField(max_length=255)
@@ -16,5 +18,6 @@ class tickets(models.Model):
     reason = models.CharField(max_length=255)
     support = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    # image = models.ImageField()
+    status = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='images/')
 
