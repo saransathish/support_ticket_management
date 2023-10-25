@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: Support_Ticket
+    buildCommand: "./build.sh"
+    env: python
+    startCommand: "gunicorn Support_Ticket.wsgi:application"
